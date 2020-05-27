@@ -36,7 +36,7 @@ function setup() {
 	//Create a Ground
 	ground = new Ground(400, 685, 800, 20);
 	 
-	box1 = new box(400, 658, 200, 20);
+	box1 = new box(400, 660, 200, 20);
 	box2 = new box(290, 580, 20, 200);
 	box3 = new box(510, 580, 20, 200);
 
