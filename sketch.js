@@ -29,7 +29,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {isStatic:true, restitution: 0.65});
 	World.add(world, packageBody);
 	
 
@@ -57,6 +57,10 @@ function draw() {
   box2.display();
   box3.display();
   ground.display();
+
+  if(packageBody.restitution > 0.65) {
+	Matter.Body.setStatic(packageBody, true);
+}
 
   drawSprites();
 
